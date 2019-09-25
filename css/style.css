@@ -28,3 +28,29 @@ nav {
     text-decoration: none;
     color: #fff;
 }
+#landing {
+    background: rgba(38, 38, 212, 0.92);
+    color: #fff;
+    height: 90vh;
+    width: 100%;
+    padding-top: 30px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-line-pack: center;
+    align-content: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+}
+#landing h1 {
+    margin-bottom: 20px;
+}
