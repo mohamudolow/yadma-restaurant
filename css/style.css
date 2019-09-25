@@ -46,6 +46,9 @@ nav {
 #branding .name {
     color: red;
 }
+#hamburger {
+    display: none;
+}
 #nav-links {
     list-style: none;
     -webkit-box-pack: justify;
@@ -89,4 +92,30 @@ nav {
 }
 #landing h1 {
     margin-bottom: 20px;
+}
+
+@media only screen and (max-width: 768px) {
+    #branding {
+        width: 75%;
+    }
+    #hamburger {
+        display: block;
+        font-size: 30px;
+        width: 35%;
+        height: 100%;
+        padding-right: 30px;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: end;
+        -ms-flex-pack: end;
+        justify-content: flex-end;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        cursor: pointer;
+    }
+    #nav-links {
+        display: none;
+    }
 }
