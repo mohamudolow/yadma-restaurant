@@ -14,4 +14,7 @@ hamburger.addEventListener("click", function() {
             link.style.animation = `navLinkFade 1s ease forwards ${0.5 + index / links.length}s`;
         }
     });
+    
+    //animate hamburger
+    hamburger.classList.toggle('toggle');
 });

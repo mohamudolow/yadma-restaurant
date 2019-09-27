@@ -54,6 +54,9 @@ nav {
     height: 2.5px;
     margin: 4px;
     background-color: #fff;
+    -webkit-transition: all 1s ease;
+    -webkit-transition: all 0.8s ease;
+    transition: all 0.8s ease;
 }
 .nav-links {
     list-style: none;
@@ -162,7 +165,17 @@ nav {
     -webkit-transform: translateX(0%);
     transform: translateX(0%);
 }
-
+.toggle .line1 {
+    -webkit-transform: rotate(-45deg) translate(-6px, 6px);
+    transform: rotate(-45deg) translate(-7px, 5px);
+}
+.toggle .line2 {
+    opacity: 0
+}
+.toggle .line3 {
+    -webkit-transform: rotate(45deg) translate(-5px, 6px);
+    transform: rotate(45deg) translate(-9px, -9px);
+}
 @-webkit-keyframes navLinkFade {
     from {
         opacity: 0;
@@ -187,3 +200,4 @@ nav {
         transform: translateX(0px);
     }
 }
+
