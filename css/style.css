@@ -18,7 +18,7 @@ nav {
     align-items: center;
 }
 
-#branding, #nav-links {
+#branding, .nav-links {
     width: 50%;
     height: 100%;
     display: -webkit-box;
@@ -46,17 +46,17 @@ nav {
 #branding .name {
     color: red;
 }
-#hamburger {
+.hamburger {
     display: none;
 }
-#nav-links {
+.nav-links {
     list-style: none;
     -webkit-box-pack: justify;
     -ms-flex-pack: distribute;
     justify-content: space-around;
     
 }
-#nav-links li a {
+.nav-links li a {
     text-decoration: none;
     color: #fff;
 }
@@ -99,7 +99,7 @@ nav {
     #branding {
         width: 75%;
     }
-    #hamburger {
+    .hamburger {
         display: block;
         font-size: 30px;
         width: 35%;
@@ -116,7 +116,7 @@ nav {
         align-items: center;
         cursor: pointer;
     }
-    #nav-links {
+    .nav-links {
         display: none;
     }
 }
