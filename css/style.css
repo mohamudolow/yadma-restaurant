@@ -18,7 +18,7 @@ nav {
     align-items: center;
 }
 
-#branding, #nav-links {
+#branding, .nav-links {
     width: 50%;
     height: 100%;
     display: -webkit-box;
@@ -46,17 +46,23 @@ nav {
 #branding .name {
     color: red;
 }
-#hamburger {
+.hamburger {
     display: none;
 }
-#nav-links {
+.hamburger div {
+    width: 30px;
+    height: 2px;
+    margin: 5px;
+    background-color: #fff;
+}
+.nav-links {
     list-style: none;
     -webkit-box-pack: justify;
     -ms-flex-pack: distribute;
     justify-content: space-around;
     
 }
-#nav-links li a {
+.nav-links li a {
     text-decoration: none;
     color: #fff;
 }
@@ -95,12 +101,11 @@ nav {
     margin-bottom: 20px;
 }
 
-@media only screen and (max-width: 768px) {
+@media screen and (max-width: 768px) {
     #branding {
         width: 75%;
     }
-    #hamburger {
-        display: block;
+    .hamburger {
         font-size: 30px;
         width: 35%;
         height: 100%;
@@ -108,15 +113,19 @@ nav {
         display: -webkit-box;
         display: -ms-flexbox;
         display: flex;
-        -webkit-box-pack: end;
-        -ms-flex-pack: end;
-        justify-content: flex-end;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
         -webkit-box-align: center;
         -ms-flex-align: center;
         align-items: center;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
         cursor: pointer;
     }
-    #nav-links {
+    .nav-links {
         display: none;
     }
 }
