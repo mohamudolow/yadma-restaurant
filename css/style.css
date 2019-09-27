@@ -50,9 +50,9 @@ nav {
     display: none;
 }
 .hamburger div {
-    width: 30px;
-    height: 2px;
-    margin: 5px;
+    width: 35px;
+    height: 2.5px;
+    margin: 4px;
     background-color: #fff;
 }
 .nav-links {
@@ -60,7 +60,6 @@ nav {
     -webkit-box-pack: justify;
     -ms-flex-pack: distribute;
     justify-content: space-around;
-    
 }
 .nav-links li a {
     text-decoration: none;
