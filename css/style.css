@@ -57,12 +57,16 @@ nav {
 }
 .nav-links {
     list-style: none;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
     -webkit-box-pack: justify;
     -ms-flex-pack: distribute;
     justify-content: space-around;
 }
 .nav-links li a {
     text-decoration: none;
+    letter-spacing: 2px;
     color: #fff;
 }
 #landing {
@@ -101,6 +105,9 @@ nav {
 }
 
 @media screen and (max-width: 768px) {
+    body {
+        overflow-x: hidden;
+    }
     #branding {
         width: 75%;
     }
@@ -125,6 +132,58 @@ nav {
         cursor: pointer;
     }
     .nav-links {
-        display: none;
+        position: fixed;
+        right: 0;
+        top: 10vh;
+        height: 90vh;
+        width: 50%;
+        background: #3c6382;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        -webkit-transform: translateX(100%);
+        transform: translateX(100%);
+        z-index: 3;
+        -webkit-transition: -webkit-transform 1s ease-in;
+        transition: -webkit-transform 1s ease-in;
+        transition: transform 1s ease-in;
+        transition: transform 1s ease-in, -webkit-transform 1s ease-in;
+    }
+    .nav-links li {
+        opacity: 0;
+    }
+}
+
+.nav-active {
+    -webkit-transform: translateX(0%);
+    transform: translateX(0%);
+}
+
+@-webkit-keyframes navLinkFade {
+    from {
+        opacity: 0;
+        -webkit-transform: translateX(100px);
+        transform: translateX(100px);
+    }
+    to {
+        opacity: 1;
+        -webkit-transform: translateX(0px);
+        transform: translateX(0px);
+    }
+}
+@keyframes navLinkFade {
+    from {
+        opacity: 0;
+        -webkit-transform: translateX(100px);
+        transform: translateX(100px);
+    }
+    to {
+        opacity: 1;
+        -webkit-transform: translateX(0px);
+        transform: translateX(0px);
     }
 }
