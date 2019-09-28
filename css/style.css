@@ -133,9 +133,10 @@ nav {
 }
 
 .secondary {
-    padding-top: 40px;
+    padding-top: 60px;
 }
 .special {
+    margin-bottom: 50px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
