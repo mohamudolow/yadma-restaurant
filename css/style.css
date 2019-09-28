@@ -131,8 +131,7 @@ nav {
     text-decoration: none;
 }
 
-.page-2 {
-   height: 100vh;
+.secondary {
     padding-top: 40px;
 }
 .special {
@@ -162,7 +161,7 @@ nav {
 }
 .showcase img {
     width: 50%;
-    height: 400px;
+    height: 450px;
 }
 .special p {
     width: 60%;
