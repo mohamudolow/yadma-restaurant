@@ -68,7 +68,48 @@
            <p>ommodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultrici</p>
            <button class="btn btn-menu"><a href="#">See more</a></button>
        </div>
+       
+       <form action="" method="get" class="enquiries">
+           <h3>Inquiries</h3>
+           <div>
+               <div id="name">
+                      <label for="first-name">
+                      First Name:
+                      <input type="text" name="first-name" id="first-name" required>
+                       </label>
+                       
+                       <label for="last-name">
+                       Last Name:
+                       <input type="text" name="last-name" id="last-name" required>
+                       </label>
+               </div>
+               
+               <label for="email" class="email">
+                   Email:
+                   <input type="text" name="email" id="email" required>
+               </label>
+               
+               <div class="topic">
+                   <label for="topic">What are your concerns regarding:</label>
+                   <select id="topic" required>
+                       <option value="" selected disabled>--please select one--</option>
+                       <option value="food-order">Food order</option>
+                       <option value="reservation">Reservation</option>
+                       <option value="complaint">Complaint</option>
+                       <option value="jobs">Job Opening</option>
+                       <option value="operation">Hours of Operation</option>
+                       <option value="other">Other</option>
+                   </select>
+                   </div>
+                   <textarea id="textarea" name="textarea" cols="60" rows="10" minlength="100" maxlength="1200" placeholder="please write here" required></textarea>
+           </div>
+           <div class="submit">
+               <button type="submit">Submit!</button>
+           </div>
+       </form>
    </div>
+   
+   
    <!-- custom javascript -->
     <script src="js/main.js"></script>
 </body>
