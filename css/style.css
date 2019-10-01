@@ -4,6 +4,7 @@
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
     letter-spacing: 1px;
+    font-family: roboto, sans-serif;
 }
 nav {
     background: #3c6382;
