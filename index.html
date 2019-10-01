@@ -69,52 +69,7 @@
            <button class="btn btn-menu"><a href="#">See more</a></button>
        </div>
        
-       <form action="" method="get" class="enquiries">
-           <h3>Inquiries</h3>
-           <div>
-               <div id="name">
-                      <label for="first-name" class="first-name">
-                      First Name:
-                      <input type="text" name="first-name" id="first-name" required>
-                       </label>
-                       
-                       <label for="last-name" class="last-name">
-                       Last Name:
-                       <input type="text" name="last-name" id="last-name" required>
-                       </label>
-               </div>
-               
-               <div class="info">
-                   <label for="email" class="email">
-                   Email:
-                   <input type="text" name="email" id="email" required>
-               </label>
-               <label for="tel" class="tel">
-                   Phone: <span class="optional">(optional)</span>
-                   <input type="tel" name="tel" id="tel" required>
-               </label>
-               </div>
-               
-               
-               <div class="topic">
-                   <label for="topic">What are your concerns regarding:</label>
-                   <select id="topic" required>
-                       <option value="" selected disabled>--please select one--</option>
-                       <option value="food-order">Food order</option>
-                       <option value="reservation">Reservation</option>
-                       <option value="complaint">Complaint</option>
-                       <option value="jobs">Job Opening</option>
-                       <option value="operation">Hours of Operation</option>
-                       <option value="other">Other</option>
-                   </select>
-                   </div>
-                   <div class="textarea">
-                       <textarea id="textarea" name="textarea" cols="60" rows="10" minlength="100" maxlength="1200" placeholder="please write here" required></textarea>
-                   </div>
-           </div>
-           
-               <button type="submit">Submit!</button>
-       </form>
+       <div id="general-inquiries"></div>
        
        <footer>
            <h5>Yadma Restaurant</h5>
@@ -125,5 +80,14 @@
    
    <!-- custom javascript -->
     <script src="js/main.js"></script>
+    
+    <!-- load react -->
+    <script crossorigin src="https://unpkg.com/react@16.9.0/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@16.9.0/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/babel-standalone@6.26.0/babel.min.js"></script>
+    
+    <!-- load react component-->
+    <script type="text/jsx" src="src/index.js"></script>
+    
 </body>
 </html>
