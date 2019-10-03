@@ -1,4 +1,4 @@
-var _app, _form;
+var _app, _form, _response;
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
@@ -26,129 +26,150 @@ var GeneralInquiries = function (_React$Component) {
 
         return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = GeneralInquiries.__proto__ || Object.getPrototypeOf(GeneralInquiries)).call.apply(_ref, [this].concat(args))), _this), _this.state = {
             firstName: '',
-            lastName: '',
-            email: '',
-            tel: '',
-            topic: '',
-            textarea: ''
-        }, _this.handleChange = function (input) {
-            return function (e) {
-                _this.setState(_defineProperty({}, input, e.target.value));
-            };
+            response: false
+        }, _this.handleChange = function (e) {
+            _this.setState({ firstName: e.target.value });
+        }, _this.handleSubmit = function (e) {
+            e.preventDefault();
+            _this.setState({ response: true });
+        }, _this.refreshPage = function () {
+            window.location.reload();
         }, _temp), _possibleConstructorReturn(_this, _ret);
     }
 
     _createClass(GeneralInquiries, [{
-        key: 'render',
+        key: "render",
         value: function render() {
-            return React.createElement(
-                'div',
+            var firstName = this.state.firstName;
+
+            return this.state.response === false ? React.createElement(
+                "div",
                 { style: styles.app },
                 React.createElement(
-                    'h2',
+                    "h2",
                     null,
-                    'General Inquiries'
+                    "General Inquiries"
                 ),
                 React.createElement(
-                    'form',
-                    { style: styles.form },
+                    "form",
+                    { style: styles.form, onSubmit: this.handleSubmit },
                     React.createElement(
-                        'label',
+                        "label",
                         null,
-                        'First Name:',
-                        React.createElement('br', null),
-                        React.createElement('input', { type: 'text', defaultValue: this.state.firstName, style: styles.input, required: true })
+                        "First Name:",
+                        React.createElement("br", null),
+                        React.createElement("input", { type: "text", style: styles.input, onChange: this.handleChange, required: true })
                     ),
-                    React.createElement('br', null),
-                    React.createElement('br', null),
+                    React.createElement("br", null),
+                    React.createElement("br", null),
                     React.createElement(
-                        'label',
+                        "label",
                         null,
-                        'Last Name:',
-                        React.createElement('br', null),
-                        React.createElement('input', { type: 'text', defaultValue: this.state.lastName, style: styles.input, onChange: this.handleChange, required: true })
+                        "Last Name:",
+                        React.createElement("br", null),
+                        React.createElement("input", { type: "text", style: styles.input, required: true })
                     ),
-                    React.createElement('br', null),
-                    ' ',
-                    React.createElement('br', null),
+                    React.createElement("br", null),
+                    " ",
+                    React.createElement("br", null),
                     React.createElement(
-                        'label',
+                        "label",
                         null,
-                        'Email:',
-                        React.createElement('br', null),
-                        React.createElement('input', { type: 'email', defaultValue: this.state.email, style: styles.input, onChange: this.handleChange, required: true })
+                        "Email:",
+                        React.createElement("br", null),
+                        React.createElement("input", { type: "email", style: styles.input, required: true })
                     ),
-                    React.createElement('br', null),
-                    React.createElement('br', null),
+                    React.createElement("br", null),
+                    React.createElement("br", null),
                     React.createElement(
-                        'label',
+                        "label",
                         null,
-                        'Phone(',
+                        "Phone(",
                         React.createElement(
-                            'i',
+                            "i",
                             null,
-                            'optional'
+                            "optional"
                         ),
-                        '):',
-                        React.createElement('br', null),
-                        React.createElement('input', { type: 'tel', defaultValue: this.state.tel, style: styles.input, onChange: this.handleChange })
+                        "):",
+                        React.createElement("br", null),
+                        React.createElement("input", { type: "tel", style: styles.input })
                     ),
-                    React.createElement('br', null),
-                    React.createElement('br', null),
+                    React.createElement("br", null),
+                    React.createElement("br", null),
                     React.createElement(
-                        'label',
+                        "label",
                         null,
-                        'What is query regarding?',
-                        React.createElement('br', null),
+                        "What is query regarding?",
+                        React.createElement("br", null),
                         React.createElement(
-                            'select',
+                            "select",
                             { style: styles.input },
                             React.createElement(
-                                'option',
-                                { defaultValue: true, disabled: true },
-                                '--please select one--'
+                                "option",
+                                { disabled: true },
+                                "--please select one--"
                             ),
                             React.createElement(
-                                'option',
-                                { value: 'food order' },
-                                'Food Order'
+                                "option",
+                                { value: "food order" },
+                                "Food Order"
                             ),
                             React.createElement(
-                                'option',
-                                { value: 'reservation' },
-                                'Reservation'
+                                "option",
+                                { value: "reservation" },
+                                "Reservation"
                             ),
                             React.createElement(
-                                'option',
-                                { value: 'complaint' },
-                                'Complaint'
+                                "option",
+                                { value: "complaint" },
+                                "Complaint"
                             ),
                             React.createElement(
-                                'option',
-                                { value: 'job-opening' },
-                                'Job Opening'
+                                "option",
+                                { value: "job-opening" },
+                                "Job Opening"
                             ),
                             React.createElement(
-                                'option',
-                                { value: 'hours-of-operation' },
-                                'Hours of Operation'
+                                "option",
+                                { value: "hours-of-operation" },
+                                "Hours of Operation"
                             ),
                             React.createElement(
-                                'option',
-                                { value: 'other' },
-                                'Other'
+                                "option",
+                                { value: "other" },
+                                "Other"
                             )
                         )
                     ),
-                    React.createElement('br', null),
-                    React.createElement('br', null),
-                    React.createElement('textarea', { rows: '10', min: '50' }),
-                    React.createElement('br', null),
+                    React.createElement("br", null),
+                    React.createElement("br", null),
+                    React.createElement("textarea", { rows: "10", minLength: "50" }),
+                    React.createElement("br", null),
                     React.createElement(
-                        'button',
-                        { type: 'submit', style: styles.submit },
-                        'Submit'
+                        "button",
+                        { type: "submit", style: styles.submit },
+                        "Submit"
                     )
+                )
+            ) : React.createElement(
+                "div",
+                { style: styles.response },
+                React.createElement(
+                    "h4",
+                    null,
+                    "Thanks for reaching out ",
+                    firstName,
+                    "!"
+                ),
+                React.createElement(
+                    "p",
+                    null,
+                    "We will get back to you as soon possible."
+                ),
+                React.createElement(
+                    "button",
+                    { type: "button", style: styles.responseBtn, onClick: this.refreshPage },
+                    "Go Back"
                 )
             );
         }
@@ -162,17 +183,31 @@ var styles = {
         margin: "auto",
         width: "70%",
         display: "-webkit-box"
-    }, _defineProperty(_app, 'display', "-ms-flexbox"), _defineProperty(_app, 'display', "flex"), _defineProperty(_app, 'WebkitBoxOrient', "vertical"), _defineProperty(_app, 'WebkitBoxDirection', "normal"), _defineProperty(_app, 'MsFexDirection', "column"), _defineProperty(_app, 'flexDirection', "column"), _defineProperty(_app, 'WebkitBoxAlign', "center"), _defineProperty(_app, 'MsFlexAlign', "center"), _defineProperty(_app, 'alignItems', "center"), _app),
+    }, _defineProperty(_app, "display", "-ms-flexbox"), _defineProperty(_app, "display", "flex"), _defineProperty(_app, "WebkitBoxOrient", "vertical"), _defineProperty(_app, "WebkitBoxDirection", "normal"), _defineProperty(_app, "MsFexDirection", "column"), _defineProperty(_app, "flexDirection", "column"), _defineProperty(_app, "WebkitBoxAlign", "center"), _defineProperty(_app, "MsFlexAlign", "center"), _defineProperty(_app, "alignItems", "center"), _app),
     input: {
         width: "100%"
     },
     form: (_form = {
         width: "60%",
         display: "-webkit-box"
-    }, _defineProperty(_form, 'display', "-ms-flexbox"), _defineProperty(_form, 'display', "flex"), _defineProperty(_form, 'WebkitBoxOrient', "vertical"), _defineProperty(_form, 'WebkitBoxDirection', "normal"), _defineProperty(_form, 'MsFexDirection', "column"), _defineProperty(_form, 'flexDirection', "column"), _defineProperty(_form, 'flexDirection', "column"), _form),
+    }, _defineProperty(_form, "display", "-ms-flexbox"), _defineProperty(_form, "display", "flex"), _defineProperty(_form, "WebkitBoxOrient", "vertical"), _defineProperty(_form, "WebkitBoxDirection", "normal"), _defineProperty(_form, "MsFexDirection", "column"), _defineProperty(_form, "flexDirection", "column"), _defineProperty(_form, "flexDirection", "column"), _form),
     submit: {
         padding: "8px",
         cursor: "pointer"
+    },
+    response: (_response = {
+        backgroundColor: "gray",
+        color: "#fff",
+        paddingTop: "20px",
+        paddingBottom: "20px",
+        display: "-webkit-box"
+    }, _defineProperty(_response, "display", "-ms-flexbox"), _defineProperty(_response, "display", "flex"), _defineProperty(_response, "WebkitBoxOrient", "vertical"), _defineProperty(_response, "WebkitBoxDirection", "normal"), _defineProperty(_response, "MsFexDirection", "column"), _defineProperty(_response, "flexDirection", "column"), _defineProperty(_response, "WebkitBoxAlign", "center"), _defineProperty(_response, "MsFlexAlign", "center"), _defineProperty(_response, "alignItems", "center"), _defineProperty(_response, "WebkitBoxPack", "center"), _defineProperty(_response, "MsFlexPack", "center"), _defineProperty(_response, "justifyContent", "center"), _response),
+    responseBtn: {
+        backgroundColor: "#3c6382",
+        color: "#fff",
+        padding: "10px 50px",
+        border: "none",
+        borderRadius: "10px"
     }
 };
 
