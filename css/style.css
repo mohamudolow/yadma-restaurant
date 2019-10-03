@@ -171,6 +171,17 @@ nav {
     margin: 10px auto;
 }
 
+/*============ MENU ============*/
+h2 {
+    text-align: center;
+}
+.row img {
+    width: 100%;
+    height: 500px;
+    margin-top: 10px;
+}
+
+
 .enquiries {
     display: -webkit-box;
     display: -ms-flexbox;
