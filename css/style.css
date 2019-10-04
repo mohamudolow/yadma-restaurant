@@ -201,6 +201,7 @@ h2 {
 footer {
     min-height: 10vh;
     margin-top: 50px;
+    padding-top: 20px;
     background-color: #3c6382;
     color: #fff;
     display: -webkit-box;
@@ -216,6 +217,9 @@ footer {
     -webkit-box-pack: center;
     -ms-flex-pack: center;
     justify-content: center;
+}
+footer .location {
+    margin-bottom: 30px;
 }
 footer p {
     font-size: 80%;
