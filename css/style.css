@@ -275,6 +275,10 @@ footer p {
         transition: -webkit-transform 1s ease-in;
         transition: transform 1s ease-in;
         transition: transform 1s ease-in, -webkit-transform 1s ease-in;
+        opacity: 0;
+    }
+    .opacity {
+        opacity: 1;
     }
     .nav-links li {
         opacity: 0;

@@ -3,6 +3,10 @@ var nav = document.querySelector(".nav-links");
 var links = document.querySelectorAll(".nav-links li");
 
 hamburger.addEventListener("click", function() {
+    
+    //set the initial visibility of nav
+    nav.classList.add("opacity");
+    
     //Toggle Nav
     nav.classList.toggle("nav-active");
     
