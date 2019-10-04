@@ -136,6 +136,16 @@ nav {
 #secondary {
     padding-top: 60px;
 }
+#events img {
+    width: 80%;
+    height: 600px;
+}
+.carousel-control-prev {
+    width: 400px;
+}
+.carousel-control-next {
+    width: 400px;
+}
 .special {
     margin-bottom: 50px;
     display: -webkit-box;
