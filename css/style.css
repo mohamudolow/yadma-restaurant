@@ -40,13 +40,13 @@ nav {
     -webkit-box-pack: center;
     -ms-flex-pack: center;
     justify-content: center;
-    font-style: oblique;
 }
 #branding p {
     font-size: 150%;
 }
 #branding .name {
     color: red;
+    font-style: oblique;
 }
 .hamburger {
     display: none;
