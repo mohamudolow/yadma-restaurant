@@ -109,10 +109,18 @@ nav {
     -ms-flex-pack: distribute;
     justify-content: space-around;
 }
-#landing h1, p {
+#landing h1 {
+    font-size: 160%;
+}
+#landing h1, #landing p {
     margin-bottom: 20px;
-    max-width: 60%;
+    width: 80%;
     text-align: center;
+}
+#landing .values p {
+    font-style: oblique;
+    font-family: monospace;
+    font-size: 110%;
 }
 #landing .btns {
     padding: 15px;
