@@ -7,8 +7,6 @@
     font-family: roboto, sans-serif;
 }
 nav {
-    position: fixed;
-    top:0;
     background: #3c6382;
     color: #fff;
     width: 100%;
@@ -85,7 +83,6 @@ nav {
     background-position: center;
     height: 90vh;
     width: 100%;
-    margin-top: 10vh;
 }
 #landing-content {
     background: black;
